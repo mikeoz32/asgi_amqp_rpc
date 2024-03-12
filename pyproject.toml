@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "vilha"
+version = "0.0.1"
+description = "ASGI server for amqp rpc protocol"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+aiormq = "^6.8.0"
+typing-extensions = "^4.10.0"
+starlette = "^0.37.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
