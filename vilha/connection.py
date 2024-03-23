@@ -53,7 +53,6 @@ class Send:
         async with self.server.channel() as channel:
             reply_to = self.scope["reply_to"]
             correlation_id = self.scope["correlation_id"]
-            print(self.scope)
             await channel.basic_publish(
                 event["body"], "test_exchange", reply_to, correlation_id=correlation_id
             )
