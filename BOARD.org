@@ -1,1 +1,29 @@
-* VILHA
+#+title Vilha board
+#+author Mike Oz
+#+email kozloffsky@hotmail.com
+
+* Server                                                                :server:
+
+  Vilha server serves asgi application
+
+* Integrations                                             :server integrations:
+
+** TODO [#A] Starlette                           :server integratiocs starlette:
+  Integration code to allow use of Starlette infrastructure
+
+** TODO [#C] FASTApi DI
+  Support for DI from FASTApi
+
+
+* Client                                                                :client:
+
+** TODO [#A] Python async client
+  Async client that uses Vilha connection protocol to call service methods
+
+*** TODO Async Client class
+  Class that connects to brocker with connection protocol and have method to call
+  service method by service name and method name
+
+*** TODO [#A] Support for args and kwargs
+  Client should be able to pass arguments array and keyword arguments dict to remote
+  method
