@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "vilha"
-version = "0.0.1"
+version = "0.0.2"
 description = "ASGI server for amqp rpc protocol"
 authors = ["Your Name <you@example.com>"]
 readme = "README.md"
