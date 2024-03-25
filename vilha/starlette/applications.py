@@ -13,6 +13,7 @@ from starlette import (
 )
 from starlette._exception_handler import wrap_app_handling_exceptions
 from starlette.concurrency import run_in_threadpool
+from vilha.di import call_with_deps
 
 
 @dataclass
@@ -76,10 +77,11 @@ def request_response(
         ) -> None:
             args = await request.args()
             kwargs = await request.kwargs()
-            if _utils.is_async_callable(func):
-                response = await func(*args, **kwargs)
-            else:
-                response = await run_in_threadpool(func, *args, **kwargs)
+            # if _utils.is_async_callable(func):
+            #     response = await func(*args, **kwargs)
+            # else:
+            #     response = await run_in_threadpool(func, *args, **kwargs)
+            response = await call_with_deps(func, ctx=scope)
             await Response(response)(scope, receive, send)
 
         await wrap_app_handling_exceptions(app, request)(scope, receive, send)

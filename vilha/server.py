@@ -1,5 +1,3 @@
-
-
 import contextlib
 from typing import AsyncIterator
 from vilha.connection import Connection, Receive, Send

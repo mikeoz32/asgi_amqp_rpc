@@ -6,6 +6,13 @@
 
   Vilha server serves asgi application
 
+** TODO Serialization
+  Add support for message serialization abstraction to connection protocol
+
+*** TODO Default json message serializer
+  Create default message serializer using python builting json
+
+
 * Integrations                                             :server integrations:
 
 ** TODO [#A] Starlette                           :server integratiocs starlette:
